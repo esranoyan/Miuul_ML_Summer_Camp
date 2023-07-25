@@ -42,7 +42,7 @@ print(df["PRICE"].nunique())
 print(df["PRICE"].value_counts())
 
 # Q5: How many sales have been made from which COUNTRY?
-print(df["COUNTRY"].value_counts()),
+print(df["COUNTRY"].value_counts())
 
 # Q6: How much was earned in total from sales by COUNTRY?
 print(df.groupby("COUNTRY").agg({"PRICE": "sum"}))
@@ -108,7 +108,7 @@ print(agg_df.groupby("SEGMENT").agg({"PRICE": ["mean", "max", "sum"]}))
 
 
 # Task 8: Classify the newly arrived customers and estimate how much revenue they can bring.
-# which segment does a 33-year-old Turkish woman using ANDROID belong to and how much income is she expected to earn on average?
+# Which segment does a 33-year-old Turkish woman using ANDROID belong to and how much income is she expected to earn on average?
 new_user = "TUR_ANDROID_FEMALE_31_40"
 print(agg_df[agg_df["CUSTOMERS_LEVEL_BASED"] == new_user])
 
